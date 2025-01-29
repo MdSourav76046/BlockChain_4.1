@@ -13,15 +13,7 @@ class Block:
         self.hash = self.calculate_hash()
 
     def calculate_hash(self):
-        data_string = (
-            str(self.block_number)
-            + str(self.timestamp)
-            + str(self.transactions)
-            + str(self.previous_hash)
-            + str(self.gas_limit)
-            + str(self.gas_used)
-            + str(self.miner)
-        )
+        data_string = str(self.block_number) + str(self.timestamp) + str(self.transactions) + str(self.previous_hash) + str(self.gas_limit) + str(self.gas_used) + str(self.miner)
         return hashlib.sha256(data_string.encode('utf-8')).hexdigest()
 
 class Blockchain:
