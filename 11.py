@@ -1,16 +1,16 @@
 import hashlib
 
 # Define a message to hash
-message = b"Hello, world!"
+message = "Hello, world!"
 
 # Calculate hash values using different hash functions
-md5_hash = hashlib.md5(message).hexdigest()
-sha1_hash = hashlib.sha1(message).hexdigest()
-sha256_hash = hashlib.sha256(message).hexdigest()
+md5_hash = hashlib.md5(message.encode()).hexdigest()
+sha1_hash = hashlib.sha1(message.encode()).hexdigest()
+sha256_hash = hashlib.sha256(message.encode()).hexdigest()
 
 # Verify hash properties
 # MD5
-if md5_hash == hashlib.md5(message).hexdigest():
+if md5_hash == hashlib.md5(message.encode()).hexdigest():
     print("MD5 hash is consistent")
 else:
     print("MD5 hash is inconsistent")
@@ -21,7 +21,7 @@ else:
     print("MD5 hash is not 32 characters long")
 
 # SHA-1
-if sha1_hash == hashlib.sha1(message).hexdigest():
+if sha1_hash == hashlib.sha1(message.encode()).hexdigest():
     print("SHA-1 hash is consistent")
 else:
     print("SHA-1 hash is inconsistent")
@@ -32,7 +32,7 @@ else:
     print("SHA-1 hash is not 40 characters long")
 
 # SHA-256
-if sha256_hash == hashlib.sha256(message).hexdigest():
+if sha256_hash == hashlib.sha256(message.encode()).hexdigest():
     print("SHA-256 hash is consistent")
 else:
     print("SHA-256 hash is inconsistent")

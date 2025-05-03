@@ -10,6 +10,8 @@ class UTXO:
 
     def __str__(self):
         return f"UTXO ({self.txid}:{self.index}) with value {self.value}"
+    def __repr__(self):
+        return self.__str__()
 
 # Defining the transaction class
 class Transaction:
@@ -19,20 +21,30 @@ class Transaction:
 
     def __str__(self):
         return f"Transaction with {len(self.inputs)} inputs and {len(self.outputs)} outputs"
+    
+
 
     def hash(self):
         # Generating a hash for the transaction
-        tx_input = ''.join([str(inp.txid) + str(inp.index) for inp in self.inputs])
-        tx_output = ''.join([str(out.value) for out in self.outputs])
+        tx_input = ''
+        for i in range(0, len(self.inputs), 1):
+            inp = self.inputs[i]
+            tx_input += str(inp.txid) + str(inp.index)
+
+        tx_output = ''
+        for i in range(0, len(self.outputs), 1):
+            out = self.outputs[i]
+            tx_output += str(out.value)
+            
         tx_data = tx_input + tx_output
         return hashlib.sha256(tx_data.encode('utf-8')).hexdigest()
 
 # Defining the sample UTXOs and transactions
-utxo1 = UTXO('txid1', 0, 10)
+utxo1 = [UTXO('txid1', 0, 10), UTXO("txid1", 1, 5)]
 utxo2 = UTXO('txid2', 1, 20)
 
-input1 = [utxo1]
-output1 = [UTXO('txid3', 0, 25), UTXO('txid3', 1, 5)]
+input1 = utxo1
+output1 = [UTXO('txid3', 0, 15)]
 tx1 = Transaction(input1, output1)
 
 input2 = [utxo2]

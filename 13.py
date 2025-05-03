@@ -9,8 +9,9 @@ timestamp = int(time.time())
 difficulty = 4 # number of leading zeros required in the hash
 nonce = 0
 
+print(len(merkle_root))
 # combine the header fields into a single string
-header = str(version) + previous_block_hash + merkle_root + str(timestamp) + str(difficulty) + str(nonce)
+header = str(version) + previous_block_hash + merkle_root + str(timestamp) + str(difficulty)
 
 # loop until a valid hash is found
 while True:

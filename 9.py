@@ -6,7 +6,7 @@ def solve_puzzle(string, leading_zeros):
         nonce_str = str(nonce)
         data = string + nonce_str
         hash_value = hashlib.sha256(data.encode()).hexdigest()
-        if hash_value.startswith("0" * leading_zeros):
+        if hash_value[0:leading_zeros] == '0' * leading_zeros:
             return nonce_str, hash_value
         nonce += 1
 

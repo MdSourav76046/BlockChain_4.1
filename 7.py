@@ -41,19 +41,20 @@ class Blockchain:
 
         return True
 
-if __name__ == '__main__':
-    blockchain = Blockchain()
 
-    print("Mining block 1...")
-    block1 = Block("Transaction 1", "")
-    blockchain.add_block(block1)
+blockchain = Blockchain()
 
-    print("Mining block 2...")
-    block2 = Block("Transaction 2", "")
-    blockchain.add_block(block2)
+print("Mining block 1...")
+block1 = Block("Transaction 1", "")
+blockchain.add_block(block1)
 
-    print("Mining block 3...")
-    block3 = Block("Transaction 3", "")
-    blockchain.add_block(block3)
+print("Mining block 2...")
+block2 = Block("Transaction 2", "")
+blockchain.add_block(block2)
 
-    print("Is blockchain valid? {}".format(blockchain.is_chain_valid()))
+print("Mining block 3...")
+block3 = Block("Transaction 3", "")
+blockchain.add_block(block3)
+
+
+print("Is blockchain valid? {}".format(blockchain.is_chain_valid()))
