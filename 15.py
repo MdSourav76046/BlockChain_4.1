@@ -1,3 +1,5 @@
+# Write a program in Python to Prove Membership and Non-membership in a Merkle Tree Blockchain 
+
 import hashlib
 import binascii
 
@@ -52,5 +54,5 @@ def generate_and_verify(element, merkle_tree):
     return current_hash == merkle_tree['root']
 
 # Run the check
-ok = generate_and_verify("apple", merkle_tree)
+ok = generate_and_verify("Apple", merkle_tree)
 print("Verified?", ok)

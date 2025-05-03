@@ -1,3 +1,5 @@
+# Write a Program in Python to Verify Hash Properties
+
 import hashlib
 
 # Define a message to hash

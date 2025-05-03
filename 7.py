@@ -1,3 +1,5 @@
+# Write a program in Python to implement PoS consensus algorithm.
+
 import hashlib
 import time
 

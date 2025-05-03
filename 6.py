@@ -1,3 +1,5 @@
+# Write a program in Python to implement PoW algorithm.
+
 import hashlib
 import time
 

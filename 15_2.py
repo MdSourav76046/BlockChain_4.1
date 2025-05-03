@@ -1,3 +1,5 @@
+# Code to generate all levles of merklee tree
+
 import hashlib
 import binascii
 

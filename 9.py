@@ -1,3 +1,7 @@
+# Write a Python Program that Takes a String and the Desired Number of Leading Zeros from the 
+# User and Outputs the Input String, the Nonce Value for Which the Leading Zeros Puzzle Is Solved, 
+# and the Corresponding Hash Generated
+
 import hashlib
 
 def solve_puzzle(string, leading_zeros):

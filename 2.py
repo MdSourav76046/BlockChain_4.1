@@ -1,3 +1,4 @@
+# Write a program in Python for mining a new block in a blockchain, and print the values of the new block.
 import datetime
 
 class BlockNode:

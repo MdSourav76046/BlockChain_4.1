@@ -1,3 +1,4 @@
+# Write a program in Python to implement blockchain.
 import hashlib
 
 class Block:
